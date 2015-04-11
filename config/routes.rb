@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'overview#index', :via => :get
+  root :to => 'static_pages#index', :via => :get
+
+  get 'overview' => 'overview#index', :as => 'overview'
 end

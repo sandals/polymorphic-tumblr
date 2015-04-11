@@ -39,5 +39,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Use localhost for emails
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+  # Include clearance spec helpers
+  config.middleware.use Clearance::BackDoor
 end
