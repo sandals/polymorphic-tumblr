@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'overview' => 'overview#index', :as => 'overview'
 
+  resources :posts, :only => [:destroy]
   resources :text_posts, :only => [:new, :create]
   resources :image_posts, :only => [:new, :create]
 end
