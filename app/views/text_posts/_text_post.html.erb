@@ -1,4 +1,4 @@
 <div class="post post--text">
   <h2 class="post__title"><%= text_post.title %></h2>
-  <p><%= text_post.body %></p>
+  <p><%= raw markdown_to_html(text_post.body) %></p>
 </div>
