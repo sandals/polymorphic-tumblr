@@ -9,10 +9,30 @@ $post-radius: 4px;
   margin-bottom: 1em;
   width: 75%;
 
-  &--text { padding: 1em; }
+  &--text {
+    padding-top: 1em;
+  }
+
+  &--image {
+    .post__actions {
+      border-top: 0;
+    }
+  }
+
+  &__actions {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    text-align: right;
+    padding: 1em;
+  }
 
   &__title {
+    margin: 0 1rem;
     margin-bottom: 0.354em;
+  }
+
+  &__body {
+    padding: 0 1em;
+    padding-bottom: 1em;
   }
 
   &__image {

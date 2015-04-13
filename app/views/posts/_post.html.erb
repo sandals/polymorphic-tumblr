@@ -1,4 +1,1 @@
-<%= render post.postable %>
-<div class="post__actions">
-  <%= link_to "Delete", post, :method => :delete %>
-</div>
+<%= render post.postable, :post_parent => post  %>
