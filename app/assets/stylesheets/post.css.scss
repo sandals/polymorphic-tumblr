@@ -1,0 +1,27 @@
+$post-radius: 4px;
+
+.post {
+  border-radius: $post-radius;
+  background: white;
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.1);
+  margin-bottom: 1em;
+  width: 75%;
+
+  &--text { padding: 1em; }
+
+  &__title {
+    margin-bottom: 0.354em;
+  }
+
+  &__image {
+    display: block;
+    border-top-left-radius: $post-radius;
+    border-top-right-radius: $post-radius;
+    width: 100%;
+
+    &:only-child {
+      border-radius: $post-radius; }
+  }
+}

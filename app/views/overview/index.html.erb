@@ -1,6 +1,8 @@
 <h1>Overview</h1>
-<%= link_to "Text", new_text_post_path %>
-<%= link_to "Image", new_image_post_path  %>
+<div class="btn-group">
+  <%= link_to "Text", new_text_post_path, class: "btn" %>
+  <%= link_to "Image", new_image_post_path, class: "btn btn--primary"  %>
+</div>
 <hr>
 <!-- here be dragons -->
 <%= render @posts %>

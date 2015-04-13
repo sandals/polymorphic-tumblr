@@ -1,0 +1,29 @@
+$button-radius: 4px;
+
+.btn {
+  border-radius: $button-radius;
+  background: white;
+  color: dimgray;
+  text-decoration: none;
+  margin-top: 1em;
+  padding: 0.5em;
+
+  &:hover, &:focus {
+    background: mix(black, white, 10%); }
+  &:active {
+    -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.2); }
+
+  &--primary {
+    color: whitesmoke;
+    background: #3498db;
+
+    &:hover, &:focus {
+      background: mix(white, #3498db, 20%); }
+  }
+}
+
+.btn-group {
+  margin-top: 1em;
+}
