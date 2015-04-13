@@ -13,6 +13,7 @@ gem 'clearance'
 gem 'paperclip', '~> 4.2'
 gem 'html-pipeline'
 gem 'github-markdown'
+gem 'sanitize'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
