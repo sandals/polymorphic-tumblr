@@ -1,4 +1,4 @@
 <div class="post post--text">
-  <h2 class="post__title"><%= text_post.title %></h2>
-  <p><%= text_post.body %></p>
+  <h2 class="post__title"><%= raw render_with_pipeline(text_post.title, :emoji) %></h2>
+  <%= raw render_with_pipeline(text_post.body, [:markdown, :sanitize, :emoji]) %>
 </div>
