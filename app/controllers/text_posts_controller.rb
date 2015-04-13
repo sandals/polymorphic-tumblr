@@ -1,16 +1,16 @@
 class TextPostsController < ApplicationController
   def new
-    @new_text_post = TextPost.new
   end
 
   def create
     text_post = current_user.posts.new(postable: build_text_post)
 
-    if !text_post.save
-      flash[:error] = "Could not save post."
+    if text_post.save
+      redirect_to overview_path
+    else
+      flash[:error] = "Text posts require some content!"
+      render :new
     end
-
-    redirect_to overview_path
   end
 
   private
