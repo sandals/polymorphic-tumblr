@@ -1,0 +1,3 @@
+<div class="post__meta">
+  <%= link_to User.find_by(id: post.user_id).email, profile_path(post.user_id) %>
+</div>

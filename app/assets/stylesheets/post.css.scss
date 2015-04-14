@@ -17,6 +17,19 @@ $post-radius: 4px;
     .post__actions {
       border-top: 0;
     }
+    .post__meta {
+      padding-top: 1em;
+    }
+  }
+
+  &__meta {
+    padding: 1em;
+    padding-top: 0;
+
+    a {
+      color: dimgray;
+      text-decoration: none;
+    }
   }
 
   &__actions {
@@ -37,11 +50,8 @@ $post-radius: 4px;
 
   &__image {
     display: block;
-    border-top-left-radius: $post-radius;
-    border-top-right-radius: $post-radius;
     width: 100%;
-
-    &:only-child {
-      border-radius: $post-radius; }
+    border-bottom-left-radius: $post-radius;
+    border-bottom-right-radius: $post-radius;
   }
 }

@@ -1,4 +1,5 @@
 <div class="post post--image">
+  <%= render 'posts/post_meta', :post => post_parent %>
   <%= image_tag image_post.image.url, :class => 'post__image' %>
   <%= render 'posts/post_actions', :post => post_parent %>
 </div>
