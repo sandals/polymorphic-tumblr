@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :require_login
+
   def destroy
     post = current_user.posts.find_by(id: params[:id])
 
