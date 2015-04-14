@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   get 'overview' => 'overview#index', :as => 'overview'
   get 'profile/:id' => 'profile#show', :as => 'profile'
 
+  resources :users, :only => [] do
+    post 'follow' => 'following_relationships#create'
+    delete 'follow' => 'following_relationships#destroy'
+  end
+
   resources :posts, :only => [:destroy]
   resources :text_posts, :only => [:new, :create]
   resources :image_posts, :only => [:new, :create]
