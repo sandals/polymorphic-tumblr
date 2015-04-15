@@ -9,7 +9,7 @@ class TextPostsController < ApplicationController
       redirect_to overview_path
     else
       flash[:error] = "Text posts require some content!"
-      render :new
+      render :action => :new
     end
   end
 

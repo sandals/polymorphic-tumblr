@@ -13,7 +13,7 @@ $post-radius: 4px;
     padding-top: 1em;
   }
 
-  &--image {
+  &--image, &--video {
     .post__actions {
       border-top: 0;
     }
@@ -53,5 +53,24 @@ $post-radius: 4px;
     width: 100%;
     border-bottom-left-radius: $post-radius;
     border-bottom-right-radius: $post-radius;
+  }
+
+  &__video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+
+    iframe, object, embed {
+      position: absolute;
+      border: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }

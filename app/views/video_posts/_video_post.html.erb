@@ -1,0 +1,5 @@
+<div class="post post--video">
+  <%= render 'posts/post_meta', :post => post_parent %>
+  <div class="post__video"><%= embed(video_post.url) %></div>
+  <%= render 'posts/post_actions', :post => post_parent %>
+</div>

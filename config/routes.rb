@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :posts, :only => [:destroy]
   resources :text_posts, :only => [:new, :create]
   resources :image_posts, :only => [:new, :create]
+  resources :video_posts, :only => [:new, :create]
 end

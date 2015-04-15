@@ -1,0 +1,6 @@
+<%= form_for VideoPost.new, :html => { :multipart => true } do |f| %>
+  <%= f.label :url %>
+  <%= f.text_field :url, :required => true %>
+  <hr>
+  <%= f.submit "Post" %>
+<% end %>
