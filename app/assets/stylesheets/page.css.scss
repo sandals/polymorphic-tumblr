@@ -12,3 +12,12 @@ body {
   font: 16px/1.4 'Pt Sans';
   text-rendering: optimizeLegibility;
 }
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: #3498db;
+  }
+}
