@@ -1,0 +1,25 @@
+.nav-bar {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &__wrapper {
+    padding: 0.5em;
+  }
+
+  &__brand {
+    width: 50%;
+    float: left;
+    h1 { font-size: 300%; }
+  }
+
+  &__userarea {
+    width: 50%;
+    float: left;
+    text-align: right;
+
+    form { display: inline-block; }
+  }
+}

@@ -9,19 +9,28 @@
   </head>
   <body>
 
-    <div class="container">
-      <% if signed_in? %>
-        Signed in as: <span class="top-kek"><%= current_user.email %></span>
-        <%= button_to 'Sign out', sign_out_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign in', sign_in_path %>
-      <% end %>
-
-      <div id="flash">
-        <% flash.each do |key, value| %>
-          <div class="flash <%= key %>"><%= value %></div>
-        <% end %>
+    <header class="nav-bar">
+      <div class="nav-bar__brand">
+        <div class="nav-bar__wrapper">
+          <h1>Crumblr</h1>
+        </div>
       </div>
+      <div class="nav-bar__userarea">
+        <div class="nav-bar__wrapper">
+          <% if signed_in? %>
+            <span class="top-kek"><%= current_user.email %></span>
+            <%= button_to 'Sign out', sign_out_path, method: :delete, class: "btn" %>
+          <% else %>
+            <%= link_to 'Sign in', sign_in_path %>
+          <% end %>
+        </div>
+      </div>
+    </header>
+
+    <div id="flash">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
     </div>
 
     <div class="container">
