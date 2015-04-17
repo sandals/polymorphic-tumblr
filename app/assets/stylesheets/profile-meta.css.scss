@@ -1,0 +1,9 @@
+.profile-meta {
+  float: right;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

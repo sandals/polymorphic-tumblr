@@ -1,0 +1,13 @@
+.flash {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid mix(black, whitesmoke, 10%);
+
+  &--notice {
+    background: #ecf0f1;
+    color: #7f8c8d;
+  }
+}

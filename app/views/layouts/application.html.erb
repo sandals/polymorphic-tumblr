@@ -11,12 +11,12 @@
 
     <header class="nav-bar">
       <div class="nav-bar__brand">
-        <div class="nav-bar__wrapper">
+        <div class="container">
           <h1>Crumblr</h1>
         </div>
       </div>
       <div class="nav-bar__userarea">
-        <div class="nav-bar__wrapper">
+        <div class="container">
           <% if signed_in? %>
             <span class="top-kek"><%= current_user.email %></span>
             <%= button_to 'Sign out', sign_out_path, method: :delete, class: "btn" %>
