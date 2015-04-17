@@ -1,7 +1,9 @@
 <% if signed_in? %>
-  <% if post.user_id == current_user.id  %>
-    <div class="post__actions">
+  <div class="post__actions">
+    <% if post.user_id == current_user.id  %>
       <%= link_to "Delete", post_path(post), :method => :delete %>
-    </div>
-  <% end %>
+    <% else %>
+      <%= link_to "Reblog", reblog_path(post), :method => :post, :class => "reblog" %>
+    <% end %>
+  </div>
 <% end %>

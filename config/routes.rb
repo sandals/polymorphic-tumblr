@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   end
 
   resources :posts, :only => [:destroy]
+  post 'reblog/:id' => 'posts#reblog', :as => 'reblog'
+
   resources :text_posts, :only => [:new, :create]
   resources :image_posts, :only => [:new, :create]
   resources :video_posts, :only => [:new, :create]

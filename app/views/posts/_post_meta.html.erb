@@ -1,3 +1,9 @@
 <div class="post__meta">
-  <%= link_to User.find_by(id: post.user_id).email, profile_path(post.user_id) %>
+<% if reblogged_post? post %>
+  <%= profile_link(post.user_id) %>
+  reblogged
+  <%= profile_link(post.original_poster) %>
+<% else %>
+  <%= profile_link(post.user_id) %>
+<% end %>
 </div>

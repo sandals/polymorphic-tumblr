@@ -11,4 +11,12 @@ class PostsController < ApplicationController
       redirect_to overview_path
     end
   end
+
+  def reblog
+    dup = Post.find_by(id: params[:id]).dup
+    dup.reblogged = true
+    dup.original_poster = dup.user_id
+    current_user.posts << dup
+    redirect_to overview_path
+  end
 end
